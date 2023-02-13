@@ -2,21 +2,23 @@ package com.javatraining.service;
 
 import java.util.ArrayList;
 
+import com.javatraining.entity.Account;
+import com.javatraining.entity.Customer;
 import com.javatraining.entity.SavingsAccount;
 import com.javatraining.entity.SavingsMaxAccount;
 import com.javatraining.entity.WomenSavingsAccount;
 
 public class SavingsAccountimpl implements AccountService {
-	private ArrayList<SavingsAccount> accountList = new ArrayList();
+	public ArrayList<SavingsAccount> accountList = new ArrayList();
 
 	@Override
-	public SavingsAccount createAccount(int choice,String userName,String password) {
+	public SavingsAccount createAccount(int choice, String userName, String password) {
 		SavingsAccount savingsAccount = null;
 
 		if (choice == 1) {
-			savingsAccount = new WomenSavingsAccount("Women Savings Account", "",userName,password);
+			savingsAccount = new WomenSavingsAccount("Women Savings Account", "", userName, password);
 		} else {
-			savingsAccount = new SavingsMaxAccount("Savings Max Account","",userName,password);
+			savingsAccount = new SavingsMaxAccount("Savings Max Account", "", userName, password);
 		}
 		accountList.add(savingsAccount);
 
@@ -43,13 +45,19 @@ public class SavingsAccountimpl implements AccountService {
 	}
 
 	@Override
+	public Customer createCustomer(Account account) {
+		Customer customer = new Customer("CUS101", "Suneesh", account);
+		return customer;
+	}
+
+	@Override
 	public void displayDetiles() {
 		System.out.println("SINo\tAccountCode\t AccountType\t\tCreateDate\tBalance\tFreeLimit\r\n"
 				+ "--------------------------------------------------------------------------------\r\n");
-		int count=1;
-		for(SavingsAccount savingsAccount:accountList) {
-			System.out.println(count+" \t"+savingsAccount);
-			count+=1;
+		int count = 1;
+		for (SavingsAccount savingsAccount : accountList) {
+			System.out.println(count + " \t" + savingsAccount);
+			count += 1;
 		}
 	}
 
