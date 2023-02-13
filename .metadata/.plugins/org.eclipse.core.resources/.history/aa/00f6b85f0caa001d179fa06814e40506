@@ -1,0 +1,30 @@
+package com.javatraining.entity;
+
+import java.util.Formatter;
+
+abstract public class SavingsAccount extends Account {
+
+	private double accountBalance;
+	
+	public Formatter toString() {
+		Formatter fmt = new Formatter();
+//		String res = String.format(getAccountCode() + "/n " + getAccountName() + "/n " + getOpeningDate() + "/n "
+//				+ getExpiryDate() + "/n " + getAccountBalance());
+		return fmt.format("%15s %15s %15s\n", "Number", "Square", "Cube");  
+
+	}
+
+	public SavingsAccount(String accountName, String openingDate, String expiryDate) {
+		super(accountName, openingDate, expiryDate);
+		this.accountBalance = 0;
+	}
+
+	public double getAccountBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.javatraining.service;
+
+import com.javatraining.entity.SavingsAccount;
+import com.javatraining.entity.SavingsMaxAccount;
+import com.javatraining.entity.WomenSavingsAccount;
+
+public class SavingsAccountimpl implements AccountService {
+
+	@Override
+	public SavingsAccount createAccount(int choice) {
+		SavingsAccount savingsAccount=null;
+
+		if (choice == 1) {
+			savingsAccount = new WomenSavingsAccount("Women Savings Account", "Feb 10 2023", "");
+		} else {
+			savingsAccount = new SavingsMaxAccount("SMA001", "Savings Max Account", "Jan 10 2023", "", 2000);
+		}
+		
+		return savingsAccount;
+		
+	}
+
+	@Override
+	public void depositAmount(double amount,SavingsAccount savingsAccount) {
+		savingsAccount.setAccountBalance(savingsAccount.getAccountBalance()+amount);
+		System.out.println("you deposited "+ amount + "Rupees");
+
+	}
+
+	@Override
+	public void withdrawAmount(double amount,SavingsAccount savingsAccount) {
+		if(savingsAccount.getAccountBalance()-amount<0) {
+			System.out.println("insufficient balance");
+		}
+		else {
+			savingsAccount.setAccountBalance(savingsAccount.getAccountBalance()-amount);
+			System.out.println("you withdrawed "+ amount + "Rupees");
+		}
+
+	}
+
+}

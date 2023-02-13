@@ -1,0 +1,11 @@
+package com.javatraining.entity;
+
+public class SavingsMaxAccount extends SavingsAccount {
+
+	public SavingsMaxAccount(String accountCode, String accountName, String openingDate, String expiryDate,
+			double accountBalance) {
+		super(accountCode, accountName, openingDate, expiryDate, accountBalance);
+		// TODO Auto-generated constructor stub
+	}
+
+}

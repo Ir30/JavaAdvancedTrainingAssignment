@@ -1,0 +1,27 @@
+package com.javatraining.entity;
+
+public class WomenSavingsAccount extends SavingsAccount {
+
+	private int freeLimit;
+
+	public WomenSavingsAccount(String accountName, String openingDate, String expiryDate) {
+		super(accountName, openingDate, expiryDate);
+		this.setAccountCode("WSA"+String.valueOf(basicCode));
+		this.freeLimit = 3;
+		basicCode+=1;
+	}
+	@Override
+	public String toString() {
+		return super.toString()+"\n"+"WomenSavingsAccount [freeLimit=" + freeLimit + "]";
+	}
+
+
+	public int getFreeLimit() {
+		return freeLimit;
+	}
+
+	public void setFreeLimit(int freeLimit) {
+		this.freeLimit = freeLimit;
+	}
+
+}

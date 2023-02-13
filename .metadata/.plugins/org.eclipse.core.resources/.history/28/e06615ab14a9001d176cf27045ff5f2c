@@ -1,0 +1,5 @@
+package com.javatraining.entity;
+
+public class SavingsAccount extends Account {
+
+}

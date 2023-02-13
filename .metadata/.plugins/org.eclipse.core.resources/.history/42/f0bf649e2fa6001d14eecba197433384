@@ -1,0 +1,30 @@
+package com.nestjavatraining.utiliy;
+
+import java.util.Scanner;
+
+import com.nestjavatraining.entity.Account;
+import com.nestjavatraining.service.AccountService;
+
+public class AccountUtility {
+	
+	
+	public static void main(String[] args) {
+		
+		AccountService ac = new AccountService();
+		System.out.println("1.Create Account");
+		System.out.println("1.Display Account");
+		
+		Scanner sc = new Scanner(System.in);
+		int choice = sc.nextInt();
+		Account newAccount = new Account();
+		
+		if (choice == 1) {
+			newAccount = ac.createAccount();
+		}
+		else {
+			ac.displayAccount(newAccount);
+		}
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.nestjavatraining.entity;
+
+public class Account {
+
+}

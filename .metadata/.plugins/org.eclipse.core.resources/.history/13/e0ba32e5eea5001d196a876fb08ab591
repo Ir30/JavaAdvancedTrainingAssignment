@@ -1,0 +1,5 @@
+package com.nestjavatraining.service;
+
+public class AccountService {
+
+}

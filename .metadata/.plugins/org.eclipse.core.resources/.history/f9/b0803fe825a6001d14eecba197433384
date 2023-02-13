@@ -1,0 +1,16 @@
+package com.nestjavatraining.service;
+
+import com.nestjavatraining.entity.Account;
+
+public class AccountService {
+	
+	public void createAccount(){
+		
+		Account account = new Account("ACC100","Savings Account");
+	}
+	
+	public void displayAccount() {
+		
+	}
+
+}

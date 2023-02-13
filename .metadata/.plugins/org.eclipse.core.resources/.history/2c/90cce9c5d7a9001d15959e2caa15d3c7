@@ -1,0 +1,28 @@
+package com.javatraining.utility;
+
+import java.util.Scanner;
+
+import com.javatraining.entity.Account;
+import com.javatraining.entity.SavingsMaxAccount;
+import com.javatraining.entity.WomenSavingsAccount;
+
+public class BankUtility {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("1.Women Savings Account 2. Savings Max Account");
+		int choice = scanner.nextInt();
+
+		switch (choice) {
+
+		case 1:
+			
+			break;
+		case 2:
+		
+			break;
+		default:
+			System.out.println("Invalid choice");
+
+		}
+	}
+}

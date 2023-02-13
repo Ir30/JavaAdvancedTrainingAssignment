@@ -1,0 +1,76 @@
+package com.nestjavatraining.utiliy;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.nestjavatraining.entity.Account;
+import com.nestjavatraining.service.AccountService;
+
+public class AccountUtility {
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Account newAccount = new Account();
+		
+		ArrayList<Account> accountList=new ArrayList();
+		
+		while(true) {
+		
+			System.out.println("1.Create Account\n2.Display Account\n3.Invest Money\n4.Withdraw Money\n5.Exit");
+			
+			int choice = sc.nextInt();
+			switch (choice) {
+				case 1:{
+					System.out.println("Enter Your Name:");
+					String name = sc.next();
+					newAccount = AccountService.createAccount(name);
+					accountList.add(newAccount);
+//					for(Account ac:accountList) {
+//						System.out.println(ac.getAccountName()+"\n"+ac.getAccountNo());
+//					}
+					break;
+				}
+				case 2:{
+					System.out.println("Enter account number: ");
+					String acNo = sc.next();
+					for(Account ac:accountList) {
+//						System.out.println(acNo+"-"+ac.getAccountNo());
+						if(ac.getAccountNo().equals(acNo)) {
+							AccountService.displayAccount(ac);
+							break;
+						}
+						
+					}
+					break;
+				}
+				
+				case 3:{
+					System.out.println("Enter the amount: ");
+					float amount = 	sc.nextFloat();
+					AccountService.investMoney(amount, newAccount);
+					break;
+				}
+				
+				case 4:{
+					System.out.println("Enter the amount: ");
+					float amount = sc.nextFloat();
+					AccountService.withdrawMoney(amount, newAccount);
+					break;
+					
+				}
+				case 5:{
+					System.out.println("you are exited");
+					System.exit(0);
+				}
+				default:{
+					System.out.println("Enter a valid choice");
+				}
+				}
+					
+			
+		}
+	}
+
+}
