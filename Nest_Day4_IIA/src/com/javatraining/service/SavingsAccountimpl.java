@@ -9,56 +9,42 @@ import com.javatraining.entity.SavingsMaxAccount;
 import com.javatraining.entity.WomenSavingsAccount;
 
 public class SavingsAccountimpl implements AccountService {
-	public ArrayList<SavingsAccount> accountList = new ArrayList();
 
 	@Override
-	public SavingsAccount createAccount(int choice, String userName, String password) {
+	public SavingsAccount createAccount(int choice) {
 		SavingsAccount savingsAccount = null;
 
 		if (choice == 1) {
-			savingsAccount = new WomenSavingsAccount("Women Savings Account", "", userName, password);
+			savingsAccount = new WomenSavingsAccount("Women Savings Account", "");
 		} else {
-			savingsAccount = new SavingsMaxAccount("Savings Max Account", "", userName, password);
+			savingsAccount = new SavingsMaxAccount("Savings Max Account", "");
 		}
-		accountList.add(savingsAccount);
 
 		return savingsAccount;
 
 	}
 
 	@Override
-	public void depositAmount(double amount, SavingsAccount savingsAccount) {
-		savingsAccount.setAccountBalance(savingsAccount.getAccountBalance() + amount);
+	public void depositAmount(double amount, Account account) {
+		
+		((SavingsAccount) account).setAccountBalance(((SavingsAccount) account).getAccountBalance() + amount);
 		System.out.println("you deposited " + amount + "Rupees");
 
 	}
 
 	@Override
-	public void withdrawAmount(double amount, SavingsAccount savingsAccount) {
-		if (savingsAccount.getAccountBalance() - amount < 0) {
+	public void withdrawAmount(double amount, Account account) {
+		if (((SavingsAccount) account).getAccountBalance() - amount < 0) {
 			System.out.println("insufficient balance");
 		} else {
-			savingsAccount.setAccountBalance(savingsAccount.getAccountBalance() - amount);
+			((SavingsAccount) account).setAccountBalance(((SavingsAccount) account).getAccountBalance() - amount);
 			System.out.println("you withdrawed " + amount + "Rupees");
 		}
 
 	}
 
-	@Override
-	public Customer createCustomer(Account account) {
-		Customer customer = new Customer("CUS101", "Suneesh", account);
-		return customer;
-	}
 
-	@Override
-	public void displayDetiles() {
-		System.out.println("SINo\tAccountCode\t AccountType\t\tCreateDate\tBalance\tFreeLimit\r\n"
-				+ "--------------------------------------------------------------------------------\r\n");
-		int count = 1;
-		for (SavingsAccount savingsAccount : accountList) {
-			System.out.println(count + " \t" + savingsAccount);
-			count += 1;
-		}
-	}
+
+
 
 }

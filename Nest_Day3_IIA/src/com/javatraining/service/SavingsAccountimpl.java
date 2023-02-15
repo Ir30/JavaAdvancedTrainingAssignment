@@ -9,6 +9,14 @@ import com.javatraining.entity.WomenSavingsAccount;
 public class SavingsAccountimpl implements AccountService {
 	private ArrayList<SavingsAccount> accountList = new ArrayList();
 
+	public ArrayList<SavingsAccount> getAccountList() {
+		return accountList;
+	}
+
+	public void setAccountList(ArrayList<SavingsAccount> accountList) {
+		this.accountList = accountList;
+	}
+
 	@Override
 	public SavingsAccount createAccount(int choice,String userName,String password) {
 		SavingsAccount savingsAccount = null;

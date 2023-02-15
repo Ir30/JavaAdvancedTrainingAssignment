@@ -1,23 +1,42 @@
 package com.javatraining.entity;
 
+import java.util.ArrayList;
+
 public class Customer {
 	private String cusomerCode;
 	private String customerName;
 	private Account account;
+	private String password;
+	private ArrayList<Account> personalAccounts=new ArrayList();
+	private static int basicCode=101;
 	
-	
-
-//	@Override
-//	public String toString() {
-//		// TODO Auto-generated method stub
-//		return "Customer Name"+this.customerName+" Account Balance"+this.account.	;
-//	}
-
-	public Customer(String cusomerCode, String customerName, Account account) {
-		this.cusomerCode = cusomerCode;
+	public Customer(String customerName,String password, Account account) {
+		this.cusomerCode = "CUS"+String.valueOf(basicCode);
 		this.customerName = customerName;
 		this.account = account;
+		this.password=password;
+		basicCode+=1;
 	}
+
+
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public ArrayList<Account> getPersonalAccounts() {
+		return personalAccounts;
+	}
+
+	public void setPersonalAccounts(Account account) {
+		this.personalAccounts.add(account);
+	}
+
+	
 
 	public String getCusomerCode() {
 		return cusomerCode;

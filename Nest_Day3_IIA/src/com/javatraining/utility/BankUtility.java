@@ -33,7 +33,7 @@ public class BankUtility {
 				String password = scanner.next();
 
 				boolean b = false;
-				for (SavingsAccount ac : savingsAccountimpl.accountList) {
+				for (SavingsAccount ac : savingsAccountimpl.getAccountList()) {
 
 					if ((ac.getUserName().equals(username)) && (ac.getPassword().equals(password))) {
 						System.out.println("Login Successfull");

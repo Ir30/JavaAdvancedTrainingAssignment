@@ -4,11 +4,12 @@ public class WomenSavingsAccount extends SavingsAccount {
 
 	private int freeLimit;
 
-	public WomenSavingsAccount(String accountName, String expiryDate,String userName,String password) {
-		super(accountName, expiryDate,userName,password);
+	public WomenSavingsAccount(String accountName, String expiryDate) {
+		super(accountName, expiryDate);
 		this.setAccountCode("WSA"+String.valueOf(basicCode));
 		basicCode+=1;
 		this.freeLimit = 3;
+		this.setType(1);
 		
 	}
 	@Override

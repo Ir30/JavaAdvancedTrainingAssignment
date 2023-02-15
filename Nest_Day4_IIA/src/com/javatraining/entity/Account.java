@@ -8,16 +8,13 @@ abstract public class Account {
 	private String accountName;
 	private String openingDate;
 	private String expiryDate;
-	private String userName;
-	private String password;
+	private int type;
 	static int basicCode=101;
 	static int smaBasicCode=101;
-	public Account(String accountName, String expiryDate,String userName,String password) {
+	public Account(String accountName, String expiryDate) {
 		this.accountName = accountName;
 		this.openingDate =   String.valueOf(LocalDate.now());  
 		this.expiryDate = expiryDate;
-		this.userName=userName;
-		this.password=password;
 		
 		
 	}
@@ -31,19 +28,15 @@ abstract public class Account {
 	
 	
 
-	public String getUserName() {
-		return userName;
+
+
+	public int getType() {
+		return type;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getPassword() {
-		return password;
+	public void setType(int type) {
+		this.type = type;
 	}
 
 

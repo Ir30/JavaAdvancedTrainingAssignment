@@ -13,8 +13,8 @@ abstract public class SavingsAccount extends Account {
 		return String.format("%s\t%s",super.toString(),this.getAccountBalance());
 	}
 
-	public SavingsAccount(String accountName, String expiryDate,String userName,String password) {
-		super(accountName, expiryDate,userName,password);
+	public SavingsAccount(String accountName, String expiryDate) {
+		super(accountName, expiryDate);
 		this.accountBalance = 0;
 	}
 
