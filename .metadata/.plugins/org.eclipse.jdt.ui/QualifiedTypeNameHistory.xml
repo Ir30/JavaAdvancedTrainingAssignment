@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.javatraining.entity.CurrentAccount"/>
     <fullyQualifiedTypeName name="com.javatraining.service.CurrentAccountImpl"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>
