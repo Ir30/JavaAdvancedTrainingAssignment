@@ -1,6 +1,7 @@
 package com.javatraining.utility;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.javatraining.entity.Account;
@@ -19,7 +20,7 @@ public class BankUtility {
 		SavingsAccountimpl savingsAccountimpl = new SavingsAccountimpl();
 		CurrentAccountImpl currentAccountImpl = new CurrentAccountImpl();
 		Customer customer = null;
-		ArrayList<Customer> accountList = new ArrayList();
+		List<Customer> accountList = new ArrayList();
 		int select;
 		while (true) {
 			System.out.println(" 1. Create Account\n 2. Login \n 3. Display All Account\n 4. Exit");

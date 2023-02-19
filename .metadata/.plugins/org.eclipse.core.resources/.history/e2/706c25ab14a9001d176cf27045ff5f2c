@@ -1,5 +1,0 @@
-package com.javatraining.entity;
-
-public class SavingsMaxAccount extends SavingsAccount {
-
-}

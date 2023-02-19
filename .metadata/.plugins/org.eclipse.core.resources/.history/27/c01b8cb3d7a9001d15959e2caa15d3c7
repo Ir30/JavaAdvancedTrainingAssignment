@@ -1,9 +1,0 @@
-package com.javatraining.service;
-
-public interface AccountService {
-
-	public void createAccount(int choice);
-	public void depositAmount();
-	public void withdrawAmount();
-
-}
