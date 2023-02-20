@@ -29,6 +29,7 @@ public class ProductDaoImpl implements ProductDao {
 			preparedStatement.setDate(4, (Date) product.getActivationDate());
 			preparedStatement.setDate(5, (Date) product.getExpiryDate());
 			
+			
 			System.out.println(preparedStatement.executeUpdate()+" recode inserted");
 			connection.close();
 		}

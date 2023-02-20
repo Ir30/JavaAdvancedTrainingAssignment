@@ -82,6 +82,7 @@ public class ProductUtility {
 			productService.deleteProduct(productCode);
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
+			
 		}
 	}
 
