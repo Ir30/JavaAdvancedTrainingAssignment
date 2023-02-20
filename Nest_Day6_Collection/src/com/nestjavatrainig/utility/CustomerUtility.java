@@ -1,4 +1,4 @@
-package com.nestjavatraining.utility;
+package com.nestjavatrainig.utility;
 
 
 import java.util.ArrayList;
