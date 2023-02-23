@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.nestjavatraining.ConnectionPool.ConnectionPool"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.nestjavatraining.sortingdemo.Customer"/>
+    <fullyQualifiedTypeName name="com.nestjavatraining.springfoundation.Coatch"/>
 </qualifiedTypeNameHistroy>
