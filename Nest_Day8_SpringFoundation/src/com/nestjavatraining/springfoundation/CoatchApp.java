@@ -39,7 +39,6 @@ public class CoatchApp {
 			}
 		}while(option!=5);
 		context.close();
-
 		
 	}
 }

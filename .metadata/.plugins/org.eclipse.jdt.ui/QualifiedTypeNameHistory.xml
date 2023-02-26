@@ -11,4 +11,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.nestjavatraining.sortingdemo.Customer"/>
     <fullyQualifiedTypeName name="com.nestjavatraining.springfoundation.Coatch"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.nestjavatraoning.service.Service"/>
 </qualifiedTypeNameHistroy>
